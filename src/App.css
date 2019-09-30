@@ -14,20 +14,88 @@
   color: #09d3ac;
 }
 
-#cf {
-  position:relative;
-  margin:0 auto;
+
+.page-enter {
+  opacity: 0;
 }
 
-#cf img {
-  position:absolute;
-  left:0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 300ms, transform 300ms;
+  transition-delay:500ms;
+
 }
 
-#cf img.top:hover {
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+
+}
+
+.link-enter {
+  transform: translateX(-100%);
+
+}
+
+.link-enter-active {
+  transform: translateX(0);
+  transition-delay:500ms;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.link-exit {
+  opacity:1;
+  transform: translateY(0);
+}
+
+.link-exit-active {
   opacity:0;
+  transform: translateY(25vh);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.title-enter {
+  transform: translateY(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.title-enter-active {
+  transform: translateY(0);
+
+}
+
+.title-exit {
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+  opacity:1;
+}
+
+.title-exit-active {
+  transform: translateY(-25vh);
+  opacity:0;
+}
+
+.back-enter {
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.back-enter-active {
+  transform: translateX(0);
+  transition-delay:500ms;
+
+}
+
+.back-exit {
+  transform: translateX(0);
+
+}
+
+.back-exit-active {
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
 }
